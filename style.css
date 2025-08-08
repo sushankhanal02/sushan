@@ -1,153 +1,158 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 /* General Styles */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #101820; 
-  color: #ffffff;
-  line-height: 1.6;
+  background-color: #0d1117; 
+  color: #e6edf3;
+  line-height: 1.7;
 }
 
 /* Header */
 header {
-  background: linear-gradient(135deg, #0077ff, #00e0ff);
+  background: linear-gradient(100deg, #0099ff, #00ffcc);
   color: #ffffff;
-  padding: 1.5em;
+  padding: 2em 1em;
   text-align: center;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.4);
+  box-shadow: 0 0 20px rgba(0,255,200,0.25);
+  letter-spacing: 1px;
 }
 
 /* Navigation */
 nav a {
-  margin: 0 15px;
+  margin: 0 18px;
   color: #ffffff;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   transition: color 0.3s ease;
 }
 
 nav a:hover {
-  text-decoration: underline;
-  color: #66ffe6;
+  color: #00ffcc;
 }
 
 /* Sections */
 section {
-  padding: 3em 1.5em;
-  max-width: 1000px;
-  margin: 2em auto;
-  background: #1a1f29;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 224, 255, 0.3);
+  padding: 3.5em 2em;
+  max-width: 1100px;
+  margin: 2.5em auto;
+  background: #161b22;
+  border-radius: 8px;
+  box-shadow: 0 0 25px rgba(0, 200, 255, 0.15);
 }
 
 h2 {
-  color: #00e0ff;
-  margin-bottom: 1em;
+  color: #00e5ff;
+  margin-bottom: 1.2em;
   text-align: center;
+  font-weight: 700;
 }
 
 /* Filter Buttons */
 .filter-buttons {
   text-align: center;
-  margin-bottom: 2em;
+  margin-bottom: 2.5em;
 }
 
 .filter-buttons button {
   margin: 5px;
-  padding: 10px 20px;
-  background-color: #0077ff;
+  padding: 10px 22px;
+  background: linear-gradient(135deg, #0099ff, #00ffcc);
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 25px;
   cursor: pointer;
-  font-weight: 500;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0, 255, 200, 0.25);
+  backdrop-filter: blur(2px);
+  transition: all 0.3s ease;
 }
 
 .filter-buttons button:hover {
-  background-color: #00e0ff;
-  transform: scale(1.05);
+  background: linear-gradient(135deg, #00ccff, #00ffaa);
+  transform: translateY(-2px) scale(1.05);
 }
 
 /* Project Gallery */
 .project-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
 }
 
 .project-card {
-  background: #161b24;
-  border-radius: 12px;
+  background: #1c2128;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 224, 255, 0.08);
+  box-shadow: 0 0 20px rgba(0, 200, 255, 0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   text-align: center;
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 25px rgba(0, 224, 255, 0.2);
+  transform: rotateX(4deg) translateY(-6px);
+  box-shadow: 0 0 25px rgba(0, 255, 200, 0.2);
 }
 
 .project-card img {
   width: 100%;
-  height: 180px;
+  height: 190px;
   object-fit: cover;
   border-bottom: 1px solid #222;
 }
 
 .project-card h3 {
-  margin: 12px 0;
-  font-size: 1.15rem;
-  color: #66ffe6;
+  margin: 14px 0;
+  font-size: 1.1rem;
+  color: #00ffcc;
 }
 
 /* Forms */
 form {
-  margin-top: 2em;
+  margin-top: 2.2em;
 }
 
 form input,
 form textarea {
   display: block;
   width: 100%;
-  margin: 12px 0;
+  margin: 14px 0;
   padding: 12px;
-  border: 1px solid #0077ff;
-  border-radius: 6px;
+  border: 1px solid #0099ff;
+  border-radius: 4px;
   font-size: 1em;
-  background-color: #1a1f29;
+  background-color: #161b22;
   color: white;
   outline: none;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 form input:focus,
 form textarea:focus {
-  border-color: #00e0ff;
+  border-color: #00ffcc;
+  background-color: #1f252e;
 }
 
 form input::placeholder,
 form textarea::placeholder {
-  color: #bbb;
+  color: #999;
 }
 
 form button {
   padding: 10px 20px;
-  background-color: #00e0ff;
+  background: linear-gradient(135deg, #0099ff, #00ffcc);
   color: #ffffff;
   border: none;
-  border-radius: 6px;
+  border-radius: 25px;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 255, 200, 0.25);
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 form button:hover {
-  background-color: #0077ff;
-  transform: scale(1.05);
+  background: linear-gradient(135deg, #00ccff, #00ffaa);
+  transform: translateY(-2px) scale(1.04);
 }
