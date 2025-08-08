@@ -1,15 +1,7 @@
-/* script.js */
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.toggle-details').forEach(button => {
-    button.addEventListener('click', () => {
-      const details = button.nextElementSibling;
-      if (details.style.display === 'block') {
-        details.style.display = 'none';
-        button.textContent = 'View Details';
-      } else {
-        details.style.display = 'block';
-        button.textContent = 'Hide Details';
-      }
-    });
+function filterProjects(category) {
+  const projects = document.querySelectorAll('.project-card');
+  projects.forEach(project => {
+    const isMatch = category === 'all' || project.dataset.category === category;
+    project.style.display = isMatch ? 'block' : 'none';
   });
-});
+}
